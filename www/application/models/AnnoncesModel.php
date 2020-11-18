@@ -34,6 +34,7 @@ class AnnoncesModel extends CI_Model
 
         $this->db->select("wan_id as 'id'");
         $this->db->from("waz_annonces");
+        $this->db->order_by("wan_d_ajout", 'DESC');
         $results = $this->db->get();
 
         $annonces = $results->result();
