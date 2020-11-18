@@ -1,18 +1,17 @@
 <div class="row pt-2 mx-0 mb-1">
     <div class="col-12">
         <h1>Bienvenue</h1>
-        <p>Les Favoris</p>
-        <h2>Les Favoris</h2>
+        <p>Wazaa Immo, existe depuis 1990 à Amiens.</p>
+        <h2>Les Favoris du moment</h2>
     </div>
 </div>
 
 <div class="row pt-2 mx-0 mb-1">
     
     <?php
-    $i = 0;
-    foreach ($aTopAnnonces as $annonce)
+    foreach ($aTopAnnonces as $key => $annonce)
     {
-        if ($i == 0)
+        if ($key == 0)
         {
     ?>
             <!-- Le plus vue -->
@@ -34,7 +33,7 @@
                 </h3><!-- Titre -->
                 <h4 class="h6 card-subtitle text-muted"><?php echo $annonce->ref; ?></h4><!-- Référence -->
                 <a href="<?php echo site_url('annonces/annonce/'.$annonce->id); ?>">
-                    <img class="card-img" src="<?php echo base_url("src/img/wazaa_logo.png"); ?>"><!-- Photo 1 -->
+                    <img class="card-img border border-info" src="<?php echo base_url("src/photos/".$annonce->photo[0]); ?>"><!-- Photo 1 -->
                 </a>
             </div>
             <div class="card-body">
@@ -52,7 +51,6 @@
         </div>
     </div>
     <?php
-        $i++;
     }
     ?>
     

@@ -8,7 +8,8 @@ INSERT INTO waz_annonces (wan_id, wan_offre, wan_type, wan_pieces, wan_ref, wan_
 ( 7, 'A', 1, 5, '20A100', '100 km de Paris, maison 85m2 avec jardin', "Exclusivité : dans bourg tous commerces avec écoles, maison d'environ 85m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ", 'Somme (80), 1h00 de Paris', 85, 225, 197000, 'F', '2020-11-13', NULL),
 ( 8, 'A', 1, 5, '20A100', '100 km de Paris, maison 85m2 avec jardin', "Exclusivité : dans bourg tous commerces avec écoles, maison d'environ 85m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ", 'Somme (80), 1h00 de Paris', 85, 225, 197000, 'F', '2020-11-13', NULL),
 ( 9, 'A', 1, 5, '20A100', '100 km de Paris, maison 85m2 avec jardin', "Exclusivité : dans bourg tous commerces avec écoles, maison d'environ 85m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ", 'Somme (80), 1h00 de Paris', 85, 225, 197000, 'F', '2020-11-13', NULL),
-(10, 'A', 1, 5, '20A100', '100 km de Paris, maison 85m2 avec jardin', "Exclusivité : dans bourg tous commerces avec écoles, maison d'environ 85m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ", 'Somme (80), 1h00 de Paris', 85, 225, 197000, 'F', '2020-11-13', NULL);
+(10, 'A', 1, 5, '20A100', '100 km de Paris, maison 85m2 avec jardin', "Exclusivité : dans bourg tous commerces avec écoles, maison d'environ 85m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ", 'Somme (80), 1h00 de Paris', 85, 225, 197000, 'F', '2020-11-13', NULL),
+(11, 'L', 2, NULL, 'AP212', 'Salut les amis', "Voilà une description bien pensée.", 'Loin, très loin', NULL, 52, 52000, 'V', '2020-11-18', NULL);
 
 INSERT INTO waz_options (wopt_id, wopt_libelle) VALUES
 ( 1, 'Jardin'),
@@ -24,6 +25,14 @@ INSERT INTO waz_options (wopt_id, wopt_libelle) VALUES
 (11, 'Ascenseur'),
 (12, 'Terrasse/balcon'),
 (13, 'Cheminée');
+
+INSERT INTO waz_annonces_options (wan_id, wopt_id) VALUES
+( 1,  1),
+( 1,  2),
+( 1,  7),
+(11,  3),
+(11, 11),
+(11, 12);
 
 INSERT INTO waz_utilisateurs (wusr_id, wusr_nom, wusr_prenom, wusr_mail, wusr_mdp) VALUES
 (1, "Bernard", "Hervé", "herve.bernard@afpa.fr", "$2y$10$pEonJc5S0WYdodIHfvXqqOtOaXr.Ws9tly8H6qr7S8lstaDAfOr5O"),

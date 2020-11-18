@@ -121,13 +121,30 @@
             }
             ?>
         </span></h2><!-- Diagnostic -->
-        <h2 class="h4">Les plus</h2>
-        <ul class="list-group list-group-flush text-justify text-info col-6">
-            <!-- Options -->
-            <li class="list-group-item">Jardin</li>
-            <li class="list-group-item">Piscine</li>
-            <li class="list-group-item">Combles aménageables</li>
-        </ul>
+
+        <?php
+        foreach ($aOptions as $key => $option)
+        {
+            if ($key == 0)
+            {
+            ?>
+            <h2 class="h4">Les plus</h2>
+            <ul class="list-group list-group-flush text-justify text-info col-6">
+                <!-- Options -->
+            <?php
+            }
+            ?>
+                <li class="list-group-item"><?php echo $option; ?></li>
+            <?php
+            if ($key == count($aOptions)-1)
+            {
+            ?>
+                </ul>
+            <?php
+            }
+        }
+        ?>
+
         <h2 class="h4">Publication de l'annonce  <span class="text-info"><?php echo $annonce->ajout; ?></span></h2><!-- Date d'ajout -->
 
         <hr>
@@ -137,7 +154,13 @@
     <!-- Boite à droite de la partie article -->
     <div class="col-sm-12 col-lg-4 alert-primary pt-2 px-2 pb-1 mb-2 shadow text-center">
         <h2>Photos</h2>
-        <img class="" src="<?php echo base_url("src/img/wazaa_logo.png"); ?>"><!-- Photo 1 -->
-        <img class="" src="<?php echo base_url("src/img/wazaa_logo.png"); ?>"><!-- Photo 2 -->
+        <?php
+        foreach ($aPhotos as $key => $photo)
+        {
+        ?>
+            <img class="img-fluid border border-info" src="<?php echo base_url("src/photos/".$photo); ?>"><!-- Photo <?= $key ?> -->
+        <?php
+        }
+        ?>
     </div>
 </div>
