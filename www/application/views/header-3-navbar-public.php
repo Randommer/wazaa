@@ -21,7 +21,7 @@
                 </a>
             </li>
             <li class="nav-item <?php if ($nav == 3) { echo "active"; } ?>">
-                <a class="nav-link" href="<?php echo site_url('annonces/contact/'); ?>" title="Contact">
+                <a class="nav-link <?php if ($nav == 3) { echo "disabled"; } ?>" href="<?php echo site_url('annonces/contact/'); ?>" title="Contact">
                     <div class="d-none d-lg-block"><i class="fas fa-envelope-open-text"></i> Contact</div>
                     <div class="d-lg-none"><i class="fas fa-envelope-open-text fa-3x"></i></div>
                 </a>

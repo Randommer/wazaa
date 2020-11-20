@@ -88,6 +88,36 @@ class AnnoncesModel extends CI_Model
         return $annonce;
     }
 
+    public function referencesList()
+    { //
+
+        //chargement de la base de données
+        $this->load->database();
+
+        //construction de la requête
+        $this->db->select("wan_id as 'id', wan_ref as 'ref'");
+        $this->db->from("waz_annonces");
+        //envoie de la requête à la base
+        $results = $this->db->get();
+
+        //récupération des résultats de la requête
+        $annonces = $results->result();
+
+        //création d'un tableau
+        $aRefs = [];
+
+        //récupération des ID de chaque annonce
+        foreach ($annonces as $annonce)
+        {
+            //enregistrer dans le tableau, les annonces en les appelant par leurs ID
+            $aRefs["".$annonce->ref] = $annonce;
+        }
+
+        //renvoie du tableau d'objets Annonce avec toutes les annonces
+        return $aRefs;
+
+    }
+
     public function options($id)
     { //
 
