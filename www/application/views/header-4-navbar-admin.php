@@ -1,6 +1,6 @@
 <!-- Barre de navigation haute du site -->
 <nav class="navbar navbar-expand navbar-light alert-success">
-    <a class="navbar-brand" href="<?php echo site_url(); ?>"><i class="fas fa-user-edit"></i> Admin</a>
+    <a class="navbar-brand"><i class="fas fa-user-edit"></i> Admin</a>
     <!-- Bouton Burger pour la version mobile de la barre -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHaute">
         <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
             </li>
         </ul>
     </div>
-    <a class="btn btn-danger" href="<?php echo site_url(); ?>" title="A propos">
+    <a class="btn btn-danger" href="<?php echo site_url("NotAdmin/disconnect"); ?>" title="A propos">
         <div class="d-none d-lg-block"><i class="fas fa-sign-out-alt"></i> Déconnexion</div>
         <div class="d-lg-none"><i class="fas fa-sign-out-alt fa-3x"></i></div>
     </a>

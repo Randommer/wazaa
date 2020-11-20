@@ -1,6 +1,4 @@
 <?php
-// application/models/ProduitsModel.php
-
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class AnnoncesModel extends CI_Model
@@ -84,7 +82,7 @@ class AnnoncesModel extends CI_Model
         $annonce = $results->row();
 
         //
-        $annonce->photo = $this->photos($annonce->id, "one");
+        $annonce->photo = $this->photos($annonce->id, "one")[0];
 
         //renvoie l'objet Annonce dont l'ID est passé en argument
         return $annonce;
@@ -168,9 +166,10 @@ class AnnoncesModel extends CI_Model
 
         //construction de la requête
         $this->db->set("wan_vues", "wan_vues+1", false);
+        $this->db->from("waz_annonces");
         $this->db->where("wan_id", $id);
         //envoie de l'update à la base
-        $this->db->update("waz_annonces");
+        $this->db->update();
     }
 
 }

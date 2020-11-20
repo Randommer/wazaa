@@ -1,0 +1,23 @@
+Projet Wazaa.
+De Valentin Lengaigne
+
+Toutes les pages sont disponibles sur serveur live à l'adresse :
+https://dev.amorce.org/vlengaigne/Wazaa/
+
+fait :
+base de données
+page d'accueil qui affiche les 5 annonces les plus vues
+page qui liste toutes les annonces
+page détail d'une annonce
+page à propos
+écran de connexion utilisateur (caché à l'adresse https://dev.amorce.org/vlengaigne/Wazaa/index.php/NotAdmin )
+
+pas encore fait :
+formulaire de contact
+page qui liste les annonces pour les utilisateurs
+formulaire de création d'annonce
+formulaire de modification d'annonce
+formulaire de suppression d'annonce
+formulaire d'ajout de photo
+formulaire de suppression de photo
+validation des formulaire en JS

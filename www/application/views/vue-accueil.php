@@ -33,7 +33,7 @@
                 </h3><!-- Titre -->
                 <h4 class="h6 card-subtitle text-muted"><?php echo $annonce->ref; ?></h4><!-- Référence -->
                 <a href="<?php echo site_url('annonces/annonce/'.$annonce->id); ?>">
-                    <img class="card-img border border-info" src="<?php echo base_url("src/photos/".$annonce->photo[0]); ?>"><!-- Photo 1 -->
+                    <img class="card-img border border-info" src="<?php echo base_url("src/photos/".$annonce->photo); ?>"><!-- Photo 1 -->
                 </a>
             </div>
             <div class="card-body">
