@@ -127,7 +127,7 @@ class Annonces extends CI_Controller {
 				$this->email->to('contact@wazaaimmo.fr');
 
 				$this->email->subject('Info sur '.$this->input->post("sujet"));
-				$str = 'Hé, '.$this->input->post("nom").' voudrait des infos sur '.$this->input->post("sujet").'. Tu peux le recontacter à l\'adresse suivante : '.$this->input->post("email").'<br>'.$this->input->post("nom").' a aussi joint ce message : '.$this->input->post("question");
+				$str = 'Hé, '.$this->input->post("nom").' voudrait des infos sur '.$this->input->post("sujet").'. Tu peux le recontacter à l\'adresse suivante : '.$this->input->post("email").'<br>'.$this->input->post("nom").' a aussi joint ce message : <br>'.$this->input->post("question");
 				$this->email->message($str);
 
 				$this->email->send();
