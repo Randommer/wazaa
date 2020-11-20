@@ -12,7 +12,7 @@ class NotAdmin extends CI_Controller {
 		if (!is_null($this->session->userdata("Connecte")))
 		{
 			//chargement des vues
-			$this->load->view('header-1-master', ["titre" => "Connexion"]);
+			$this->load->view('header-1-master', ["titre" => "Connecté"]);
 			$this->load->view('header-2-header');
 			$this->load->view('header-3-navbar-public', ["nav" => 0]);
 			$this->load->view('header-4-navbar-admin', ["nav" => 0]);
@@ -88,9 +88,9 @@ class NotAdmin extends CI_Controller {
 	{ //méthode 
 
 		//on vide les variables de la session
-		// $this->session->unset_userdata("Connecte");
-		// $this->session->unset_userdata("User");
-        $_SESSION = array();
+		$this->session->unset_userdata("Connecte");
+		$this->session->unset_userdata("User");
+        // $_SESSION = array();
         //on détruit la session
 		$this->session->sess_destroy();
 		

@@ -135,7 +135,7 @@ class Annonces extends CI_Controller {
 				$aView["str"] = $str;
 
 				//chargement des vues
-				$this->load->view('header-1-master', ["titre" => "Contactez-nous"]);
+				$this->load->view('header-1-master', ["titre" => "Merci de nous avoir contacté"]);
 				$this->load->view('header-2-header');
 				$this->load->view('header-3-navbar-public', ["nav" => 3]);
 				if (!is_null($this->session->userdata("Connecte")))
