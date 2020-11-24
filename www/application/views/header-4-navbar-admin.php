@@ -9,13 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarHaute">
         <ul class="navbar-nav">
             <li class="nav-item <?php if ($nav == 1) { echo "active"; } ?>">
-                <a class="nav-link" href="<?php echo site_url(); ?>" title="Annonces">
+                <a class="nav-link" href="<?php echo site_url("AdminPanel/annonces"); ?>" title="Annonces">
                     <div class="d-none d-lg-block"><i class="fas fa-pencil-alt"></i> Annonces</div>
                     <div class="d-lg-none"><i class="fas fa-pencil-alt fa-3x"></i></div>
                 </a>
             </li>
-            <li class="nav-item <?php if ($nav == 1) { echo "active"; } ?>">
-                <a class="nav-link" href="<?php echo site_url(); ?>" title="Contact">
+            <li class="nav-item <?php if ($nav == 2) { echo "active"; } ?>">
+                <a class="nav-link" href="<?php echo site_url("AdminPanel/photos"); ?>" title="Contact">
                     <div class="d-none d-lg-block"><i class="fas fa-camera"></i> Photos</div>
                     <div class="d-lg-none"><i class="fas fa-camera fa-3x"></i></div>
                 </a>

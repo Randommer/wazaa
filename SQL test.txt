@@ -1,0 +1,6 @@
+SELECT `wan_id`, concat(SUBSTR(wusr_prenom, 1, 1), '. ', wusr_nom)
+FROM `waz_annonces`
+JOIN waz_historique h1 ON h1.whis_wan_id = wan_id
+LEFT JOIN waz_historique h2 ON (h2.whis_wan_id = wan_id AND (h1.whis_date < h2.whis_date OR (h1.whis_date = h2.whis_date AND h1.whis_date < h2.whis_date)))
+JOIN waz_utilisateurs ON h1.whis_wusr_id = wusr_id
+WHERE `wan_id` = 1 AND h2.whis_id IS NULL;

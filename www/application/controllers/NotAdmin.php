@@ -94,6 +94,6 @@ class NotAdmin extends CI_Controller {
         //on détruit la session
 		$this->session->sess_destroy();
 		
-		redirect("");
+		redirect();
 	}
 }

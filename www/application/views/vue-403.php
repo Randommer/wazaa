@@ -5,7 +5,7 @@
             <h2 class="h3 font-weight-bold">Accès interdit</h2>
             <hr>
             <p class="text-justify">Vous n'avez pas les permissions pour accèder à cette page.</p>
-            <p class="text-justify"> Vous allez être redirigé dans 5 secondes.</p>
+            <p class="text-justify">Vous allez être redirigé dans 5 secondes.</p>
         </div>
     </div>
 </div>

@@ -50,4 +50,21 @@ class Accueil extends CI_Controller {
         $this->load->view('vue-a-propos');
         $this->load->view('footer');
 	}
+
+	public function error404()
+	{
+		//réglage du fuseau horaire
+		date_default_timezone_set("Europe/Paris");
+
+		//chargement des vues
+		$this->load->view('header-1-master', ["titre" => "Erreur 404"]);
+        $this->load->view('header-2-header');
+        $this->load->view('header-3-navbar-public', ["nav" => 0]);
+        if (!is_null($this->session->userdata("Connecte")))
+		{
+			$this->load->view('header-4-navbar-admin', ["nav" => 0]);
+		}
+        $this->load->view('vue-404');
+        $this->load->view('footer');
+	}
 }

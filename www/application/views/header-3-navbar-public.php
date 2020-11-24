@@ -1,6 +1,6 @@
 <!-- Barre de navigation haute du site -->
 <nav class="navbar navbar-expand navbar-light alert-primary">
-    <a class="navbar-brand" href="<?php echo site_url(); ?>"><i class="fas fa-key"></i> Wazaa</a>
+    <a class="navbar-brand" href="<?php echo base_url(); ?>"><i class="fas fa-key"></i> Wazaa</a>
     <!-- Bouton Burger pour la version mobile de la barre -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHaute">
         <span class="navbar-toggler-icon"></span>
@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarHaute">
         <ul class="navbar-nav">
             <li class="nav-item <?php if ($nav == 1) { echo "active"; } ?>">
-                <a class="nav-link" href="<?php echo site_url(); ?>" title="Accueil">
+                <a class="nav-link" href="<?php echo base_url(); ?>" title="Accueil">
                     <div class="d-none d-lg-block"><i class="fas fa-home"></i> Accueil</div>
                     <div class="d-lg-none"><i class="fas fa-home fa-3x"></i></div>
                 </a>
